@@ -1,8 +1,6 @@
 <!-- 管理画面にアイキャッチ画像の項目を作る -->
 <?php
-// add_action("init", function () {
-add_theme_support("post-thumbnails");
-
+add_theme_support('post-thumbnails');
 
 // 再利用する関数を定義する
 // アイキャッチ画像がなければ標準画像を取得する

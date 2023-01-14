@@ -2,14 +2,16 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-
+  <!-- headerを入れ込むテンプレートタグ -->
   <?php get_header(); ?>
 
 </head>
 
+<!-- bodyにclassが沢山つく -->
+
 <body <?php body_class(); ?>>
 
-
+  <!-- 切り取ったパーツを呼び出す -->
   <?php get_template_part("includes/header"); ?>
 
   <!-- 投稿ページでも決まり文句としてif構文を書いておく -->
@@ -20,7 +22,7 @@
       <!-- Page Header -->
       <?php
       // functions.phpに定義したアイキャッチ画像取得のオリジナルの関数を呼び出す
-      $img = get_eyecatch_with_default();
+      $eyecatch = get_eyecatch_with_default();
       // 下記コードはfunctions.phpに関数として定義したものの元の形
       // if (has_post_thumbnail()) :
       //   $id = get_post_thumbnail_id();
@@ -29,7 +31,7 @@
       //   $img = array(get_template_directory_uri() . "/img/post-bg.jpg");
       // endif;
       ?>
-      <header class="masthead" style="background-image: url('<?php echo $img[0]; ?>')">
+      <header class="masthead" style="background-image: url('<?php echo $eyecatch[0]; ?>')">
         <div class="overlay"></div>
         <div class="container">
           <div class="row">
@@ -65,8 +67,10 @@
     <?php endwhile; ?>
   <?php endif; ?>
 
+  <!-- 切り取ったパーツを呼び出す -->
   <?php get_template_part("includes/footer"); ?>
 
+  <!-- footerを入れ込むテンプレートタグ -->
   <?php get_footer(); ?>
 
 </body>

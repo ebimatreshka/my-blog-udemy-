@@ -1,4 +1,3 @@
-<!-- 管理画面にアイキャッチ画像の項目を作る -->
 <?php
 add_theme_support('post-thumbnails');
 

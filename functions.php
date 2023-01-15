@@ -1,5 +1,12 @@
 <?php
+add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
+
+// メニューをサポート
+register_nav_menus([
+    "global_nav" => "グローバルナビゲーション"
+]);
+
 
 // 再利用する関数を定義する
 // アイキャッチ画像がなければ標準画像を取得する
